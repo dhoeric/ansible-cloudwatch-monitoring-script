@@ -1,0 +1,5 @@
+---
+cw_version: 1.2.1
+
+install_dir: /var/run/cw_mon_scripts
+
