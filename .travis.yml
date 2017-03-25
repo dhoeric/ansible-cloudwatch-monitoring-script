@@ -6,6 +6,9 @@ python: "2.7"
 services:
   - docker
 
+env:
+  - ANSIBLE_HOST_KEY_CHECKING=false
+
 before_install:
   - sudo apt-get update -qq
 
