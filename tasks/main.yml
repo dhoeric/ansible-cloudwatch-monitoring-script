@@ -41,9 +41,9 @@
     dest: "{{ install_dir }}"
 
 - name: Basic check
-  command: "ls {{ install_dir }}"
+  command: "ls {{ install_dir }}/aws-scripts-mon"
 
 - name: Set cron job
   cron:
-    job: "{{ install_dir }}/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron"
+    job: "{{ install_dir }}/aws-scripts-mon/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron"
     minute: "*/5"
