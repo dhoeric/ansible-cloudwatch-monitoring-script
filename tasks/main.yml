@@ -47,3 +47,9 @@
   cron:
     job: "{{ install_dir }}/aws-scripts-mon/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron"
     minute: "*/5"
+
+- name: Show crontab
+  command: crontab -l
+  register: show_crontab
+
+- debug: msg="{{ crontab.stdout }}"
