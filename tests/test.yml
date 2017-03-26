@@ -2,4 +2,4 @@
 - hosts: all
   remote_user: root
   roles:
-    - ansible-cloudwatch-monitoring-script
+    - role_under_test
